@@ -42,7 +42,7 @@ Response quiz::QuestionMC::check(std::string input) const
 	}
 
 	string uppercaseInput(1, answer);
-	char correctIndex = toupper(getAnswer()[0])-'A';
+	char correctIndex = toupper(getAnswer()[0]) - 'A';
 
 	return getResult(uppercaseInput, options_[correctIndex]);
 }
