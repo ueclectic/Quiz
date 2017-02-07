@@ -10,7 +10,7 @@ namespace quiz {
 		QuestionTF(std::string questionContent, std::string correctAnswer, int points);
 		~QuestionTF();
 
-		std::string print() const;
+		std::string print(int number) const;
 		Response check(std::string input) const;
 	};
 

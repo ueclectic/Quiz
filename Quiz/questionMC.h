@@ -11,9 +11,10 @@ namespace quiz {
 		QuestionMC(std::string questionContent, std::string correctAnswer, int points);
 		~QuestionMC();
 
-		std::string print() const;
+		std::string print(int number) const;
 		Response check(std::string input) const;
 		void addOption(std::string option);
+
 	private:
 		std::vector<std::string> options_;
 	};

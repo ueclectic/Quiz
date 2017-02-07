@@ -14,9 +14,9 @@ QuestionSA::~QuestionSA()
 {
 }
 
-std::string quiz::QuestionSA::print() const
+std::string quiz::QuestionSA::print(int number) const
 {
-	return getQuestion()+"\n";
+	return getQuestion(number)+"\n";
 }
 
 Response quiz::QuestionSA::check(std::string input) const

@@ -14,9 +14,10 @@ Question::~Question()
 }
 
 
-std::string Question::getQuestion() const
+std::string Question::getQuestion(int number) const
 {
-	return question_;
+	string header = "Question " + to_string(number) + " (" + to_string(getPoints()) + ")\n";
+	return header + question_;
 }
 
 

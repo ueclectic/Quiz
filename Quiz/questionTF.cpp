@@ -14,9 +14,9 @@ QuestionTF::~QuestionTF()
 {
 }
 
-std::string quiz::QuestionTF::print() const
+std::string quiz::QuestionTF::print(int number) const
 {
-	return getQuestion()+"\n";
+	return getQuestion(number)+"\n";
 }
 
 Response quiz::QuestionTF::check(std::string input) const

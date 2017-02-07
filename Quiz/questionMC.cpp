@@ -15,9 +15,9 @@ QuestionMC::~QuestionMC()
 {
 }
 
-std::string quiz::QuestionMC::print() const
+std::string quiz::QuestionMC::print(int number) const
 {
-	string output = getQuestion() + "\n";
+	string output = getQuestion(number) + "\n";
 	for (char i = 0; i < options_.size(); i++) {
 		string index(1, 'A' + i);
 		output += index + ") " + options_[i] + "\n";
@@ -42,8 +42,9 @@ Response quiz::QuestionMC::check(std::string input) const
 	}
 
 	string uppercaseInput(1, answer);
+	char correctIndex = toupper(getAnswer()[0])-'A';
 
-	return getResult(uppercaseInput, options_[index]);
+	return getResult(uppercaseInput, options_[correctIndex]);
 }
 
 void quiz::QuestionMC::addOption(std::string option)
