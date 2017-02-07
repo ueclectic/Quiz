@@ -3,7 +3,7 @@
 using namespace quiz;
 
 Player::Player(std::string firstName, std::string lastName)
-	:firstName_(firstName), lastName_(lastName),score_(0)
+	:firstName_(firstName), lastName_(lastName), score_(0)
 {
 }
 

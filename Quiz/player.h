@@ -13,8 +13,8 @@ namespace quiz {
 		std::string getLastName() const;
 		int getScore() const;
 		void addPoints(const int points);
-	private:
 
+	private:
 		std::string firstName_;
 		std::string lastName_;
 		int score_;
