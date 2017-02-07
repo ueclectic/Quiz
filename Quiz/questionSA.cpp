@@ -1,4 +1,4 @@
-#include "questionSA.h"
+#include "questionsa.h"
 #include <stdexcept>
 
 using namespace std;
@@ -16,7 +16,7 @@ QuestionSA::~QuestionSA()
 
 std::string quiz::QuestionSA::print() const
 {
-	return getQuestion();
+	return getQuestion()+"\n";
 }
 
 Response quiz::QuestionSA::check(std::string input) const

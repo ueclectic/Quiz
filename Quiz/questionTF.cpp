@@ -1,4 +1,4 @@
-#include "questionTF.h"
+#include "questiontf.h"
 #include <stdexcept>
 
 using namespace std;
@@ -16,7 +16,7 @@ QuestionTF::~QuestionTF()
 
 std::string quiz::QuestionTF::print() const
 {
-	return getQuestion();
+	return getQuestion()+"\n";
 }
 
 Response quiz::QuestionTF::check(std::string input) const
