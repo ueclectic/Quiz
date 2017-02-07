@@ -144,11 +144,13 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="question.cpp" />
+    <ClCompile Include="questionSA.cpp" />
     <ClCompile Include="questionTF.cpp" />
     <ClCompile Include="response.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="question.h" />
+    <ClInclude Include="questionSA.h" />
     <ClInclude Include="questionTF.h" />
     <ClInclude Include="response.h" />
   </ItemGroup>
