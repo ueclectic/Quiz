@@ -28,5 +28,5 @@ Response quiz::QuestionTF::check(std::string input) const
 		throw invalid_argument("invalid input");
 	}
 
-	return getResult(input);
+	return getResult(input, getAnswer());
 }

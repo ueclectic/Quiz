@@ -31,7 +31,7 @@ int Question::getPoints() const
 	return points_;
 }
 
-Response quiz::Question::getResult(std::string input) const
+Response quiz::Question::getResult(std::string input, std::string correctAnswer) const
 {
 	const string points = to_string(getPoints());
 	if (input == getAnswer()) {
@@ -39,6 +39,6 @@ Response quiz::Question::getResult(std::string input) const
 	}
 	else
 	{
-		return Response("Incorrect, the answer was '" + getAnswer() + "'. You lose " + points + " points.", -getPoints());
+		return Response("Incorrect, the answer was '" + correctAnswer + "'. You lose " + points + " points.", -getPoints());
 	}
 }

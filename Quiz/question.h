@@ -18,7 +18,7 @@ namespace quiz {
 		std::string getQuestion() const;
 		std::string getAnswer() const;
 		int getPoints() const;
-		Response getResult(std::string input) const;
+		Response getResult(std::string input, std::string correctAnswer) const;
 
 	private:
 		std::string question_;
