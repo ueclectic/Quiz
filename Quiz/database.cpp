@@ -1,8 +1,9 @@
-#include <fstream>
 #include <iostream>
 
 #include "database.h"
-
+#include "questionmc.h"
+#include "questionsa.h"
+#include "questiontf.h"
 
 using namespace quiz;
 using namespace std;
@@ -34,7 +35,7 @@ std::vector<std::shared_ptr<Question>> quiz::Database::readQuestions()
 
 		int questionsCount = getQuestionsCount();
 
-		while (!db_.eof() && questions.size()<questionsCount) 
+		while (!db_.eof() && questions.size() < questionsCount)
 		{
 			shared_ptr<Question> question = readQuestion();
 			questions.push_back(question);
@@ -101,19 +102,19 @@ std::shared_ptr<Question> quiz::Database::readQuestion()
 	string questionType = parts[0];
 	int questionPoints = stoi(parts[1]);
 
-	if (questionPoints<=0) {
+	if (questionPoints <= 0) {
 		throw invalid_argument("incorrect points number");
 	}
 
 	shared_ptr<Question> question;
 	if (questionType == "TF") {
-		question=readQuestionTF(questionPoints);
+		question = readQuestionTF(questionPoints);
 	}
 	else if (questionType == "MC") {
-		question=readQuestionMC(questionPoints);
+		question = readQuestionMC(questionPoints);
 	}
 	else if (questionType == "SA") {
-		question=readQuestionSA(questionPoints);
+		question = readQuestionSA(questionPoints);
 	}
 	else {
 		throw invalid_argument("incorrect question type");

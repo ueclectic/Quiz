@@ -5,9 +5,6 @@
 #include <fstream>
 
 #include "question.h"
-#include "questionmc.h"
-#include "questionsa.h"
-#include "questiontf.h"
 
 namespace quiz {
 
@@ -17,6 +14,7 @@ namespace quiz {
 		Database(std::string path);
 		~Database();
 		std::vector<std::shared_ptr<Question>> readQuestions();
+
 	private:
 		std::string dbPath_;
 		std::ifstream db_;
