@@ -20,13 +20,18 @@ void quiz::Game::start()
 	try
 	{
 		createPlayer();
-		Database database("quiz.txt");
+
+		getDatabasePath();
+		Database database(dbPath_);
+
 		questions_ = database.readQuestions();
+
 		int quizSize = getQuizSize(questions_.size());
 		vector<int> randomIndexes = generateRandomIndexes(questions_.size());
+
 		for (int i = 0; i < quizSize; i++) {
 			int curIndex = randomIndexes[i];
-			cout << endl << questions_[curIndex]->print(i+1);
+			cout << endl << questions_[curIndex]->print(i + 1);
 
 			Response response = checkUserInput(questions_[curIndex]);
 			cout << response.MESSAGE << endl;
@@ -35,7 +40,6 @@ void quiz::Game::start()
 
 		cout << endl << endl << "Quiz finished" << endl;
 		cout << "Total score: " << player_->getScore() << endl << endl;
-
 	}
 	catch (...)
 	{
@@ -55,6 +59,12 @@ void quiz::Game::createPlayer()
 	cin >> lastName;
 
 	player_ = unique_ptr<Player>(new Player(firstName, lastName));
+}
+
+void quiz::Game::getDatabasePath()
+{
+	cout <<endl<< "What file stores your questions?" << endl;
+	cin >> dbPath_;
 }
 
 int quiz::Game::getQuizSize(int maxSize)

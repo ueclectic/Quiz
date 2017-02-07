@@ -44,6 +44,7 @@ std::vector<std::shared_ptr<Question>> quiz::Database::readQuestions()
 	catch (...)
 	{
 		cout << "Error: can't open database  '" << dbPath_ << "'" << endl;
+		throw invalid_argument("db not exists");
 	}
 
 	if (db_.is_open()) {

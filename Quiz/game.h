@@ -22,6 +22,7 @@ namespace quiz {
 		std::string dbPath_;
 
 		void createPlayer();
+		void getDatabasePath();
 		int getQuizSize(int maxSize);
 		std::vector<int> generateRandomIndexes(int maxSize);
 		Response checkUserInput(std::shared_ptr<Question> question);
