@@ -13,22 +13,8 @@ Question::~Question()
 {
 }
 
-Response quiz::Question::check(std::string input) const
-{
-	//Todo: check input
 
-	const string points = to_string(getPoints());
-	if (input == getAnswer()) {
-		return Response("Correct! You get " + points + " points.", getPoints());
-	}
-	else
-	{
-		return Response("Incorrect, the answer was '" + getAnswer() + "'. You lose " + points + " points.", -getPoints());
-	}
-}
-
-
-inline std::string Question::getQuestion() const
+std::string Question::getQuestion() const
 {
 	return question_;
 }
@@ -43,4 +29,16 @@ std::string Question::getAnswer() const
 int Question::getPoints() const
 {
 	return points_;
+}
+
+Response quiz::Question::getResult(std::string input) const
+{
+	const string points = to_string(getPoints());
+	if (input == getAnswer()) {
+		return Response("Correct! You get " + points + " points.", getPoints());
+	}
+	else
+	{
+		return Response("Incorrect, the answer was '" + getAnswer() + "'. You lose " + points + " points.", -getPoints());
+	}
 }

@@ -12,12 +12,13 @@ namespace quiz {
 		virtual ~Question();
 
 		virtual std::string print() const = 0;
-		virtual Response check(std::string input) const;
+		virtual Response check(std::string input) const=0;
 
 	protected:
-		inline std::string getQuestion() const;
+		std::string getQuestion() const;
 		std::string getAnswer() const;
 		int getPoints() const;
+		Response getResult(std::string input) const;
 
 	private:
 		std::string question_;
