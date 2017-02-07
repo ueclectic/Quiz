@@ -12,7 +12,7 @@ namespace quiz {
 		virtual ~Question();
 
 		virtual std::string print(int number) const = 0;
-		virtual Response check(std::string input) const=0;
+		virtual Response check(std::string input) const = 0;
 
 	protected:
 		std::string getQuestion(int number) const;
