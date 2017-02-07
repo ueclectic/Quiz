@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="question.cpp" />
     <ClCompile Include="questionmc.cpp" />
     <ClCompile Include="questionsa.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="response.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="player.h" />
     <ClInclude Include="question.h" />
     <ClInclude Include="questionmc.h" />
     <ClInclude Include="questionsa.h" />
