@@ -11,6 +11,5 @@ namespace quiz {
 		const std::string MESSAGE;
 		const int VALUE;
 	};
-
 }
 
