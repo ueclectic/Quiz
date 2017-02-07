@@ -24,10 +24,13 @@
     <ClCompile Include="response.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="questionTF.cpp">
+    <ClCompile Include="questionmc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="questionSA.cpp">
+    <ClCompile Include="questionsa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="questiontf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +41,13 @@
     <ClInclude Include="response.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="questionTF.h">
+    <ClInclude Include="questionmc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="questionSA.h">
+    <ClInclude Include="questionsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="questiontf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

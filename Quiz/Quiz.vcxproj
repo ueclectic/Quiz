@@ -144,14 +144,16 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="question.cpp" />
-    <ClCompile Include="questionSA.cpp" />
-    <ClCompile Include="questionTF.cpp" />
+    <ClCompile Include="questionmc.cpp" />
+    <ClCompile Include="questionsa.cpp" />
+    <ClCompile Include="questiontf.cpp" />
     <ClCompile Include="response.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="question.h" />
-    <ClInclude Include="questionSA.h" />
-    <ClInclude Include="questionTF.h" />
+    <ClInclude Include="questionmc.h" />
+    <ClInclude Include="questionsa.h" />
+    <ClInclude Include="questiontf.h" />
     <ClInclude Include="response.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
