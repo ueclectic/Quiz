@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="database.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="question.cpp" />
     <ClCompile Include="questionmc.cpp" />
@@ -153,12 +154,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
+    <ClInclude Include="database.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="question.h" />
     <ClInclude Include="questionmc.h" />
     <ClInclude Include="questionsa.h" />
     <ClInclude Include="questiontf.h" />
     <ClInclude Include="response.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="quiz.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
