@@ -38,8 +38,7 @@ void quiz::Game::start()
 			player_->addPoints(response.VALUE);
 		}
 
-		cout << endl << endl << "Quiz finished" << endl;
-		cout << "Total score: " << player_->getScore() << endl << endl;
+		printFooter();
 	}
 	catch (...)
 	{
@@ -63,7 +62,7 @@ void quiz::Game::createPlayer()
 
 void quiz::Game::getDatabasePath()
 {
-	cout <<endl<< "What file stores your questions?" << endl;
+	cout << endl << "What file stores your questions?" << endl;
 	cin >> dbPath_;
 }
 
@@ -121,6 +120,13 @@ Response quiz::Game::checkUserInput(std::shared_ptr<Question> question)
 			cout << "Incorrect input. Please try again" << endl;
 		}
 	}
+}
+
+void quiz::Game::printFooter()
+{
+	cout << endl << endl << player_->getFirstName() << " " << player_->getLastName() << ", your game is over!" << endl;
+	cout << "You final score is " << player_->getScore() << " points. " << endl;
+	cout << "Better luck next time!" << endl << endl;
 }
 
 

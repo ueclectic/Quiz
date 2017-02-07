@@ -26,6 +26,7 @@ namespace quiz {
 		int getQuizSize(int maxSize);
 		std::vector<int> generateRandomIndexes(int maxSize);
 		Response checkUserInput(std::shared_ptr<Question> question);
+		void printFooter();
 
 	};
 }
