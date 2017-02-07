@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <memory>
-#include <stdexcept>
 
 #include "player.h"
 #include "question.h"
@@ -28,6 +27,5 @@ namespace quiz {
 		Response checkUserInput(std::shared_ptr<Question> question);
 
 	};
-
 }
 

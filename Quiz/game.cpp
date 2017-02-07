@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+#include <stdexcept>
 
 #include "game.h"
 #include "questionmc.h"

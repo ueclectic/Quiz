@@ -14,6 +14,7 @@ namespace quiz {
 		int getScore() const;
 		void addPoints(const int points);
 	private:
+
 		std::string firstName_;
 		std::string lastName_;
 		int score_;
