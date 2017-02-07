@@ -16,13 +16,11 @@ QuestionTF::~QuestionTF()
 
 std::string quiz::QuestionTF::print(int number) const
 {
-	return getQuestion(number)+"\n";
+	return getQuestion(number) + "\n";
 }
 
 Response quiz::QuestionTF::check(std::string input) const
 {
-	//Todo: check input
-
 	if (!(input == "true" || input == "false"))
 	{
 		throw invalid_argument("invalid input");
