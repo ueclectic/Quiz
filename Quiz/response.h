@@ -8,7 +8,6 @@ namespace quiz {
 	public:
 		Response(std::string message, int value);
 		~Response();
-	private:
 		const std::string MESSAGE;
 		const int VALUE;
 	};
