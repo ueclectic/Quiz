@@ -11,6 +11,7 @@ namespace quiz {
 		~QuestionTF();
 
 		std::string print() const;
+		Response check(std::string input) const;
 	};
 
 }
