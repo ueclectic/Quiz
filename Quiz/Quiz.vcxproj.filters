@@ -24,12 +24,18 @@
     <ClCompile Include="response.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="questionTF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="question.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="response.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="questionTF.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
